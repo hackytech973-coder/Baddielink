@@ -1,0 +1,2187 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BaddieLink — Connect. Vibe. Belong.</title>
+
+  <meta
+    name="description"
+    content="BaddieLink is a social discovery platform for meeting people, making connections and sharing moments."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       APP CONTAINER
+  ====================================================== -->
+
+  <div id="app">
+
+    <!-- ===================================================
+         LANDING PAGE
+    ==================================================== -->
+
+    <section id="landing-page" class="page active">
+
+      <nav class="navbar">
+        <div class="brand">
+          <span class="brand-icon">
+            <i class="fa-solid fa-link"></i>
+          </span>
+          <span>BaddieLink</span>
+        </div>
+
+        <button
+          class="nav-login-btn"
+          data-action="open-login"
+        >
+          Log In
+        </button>
+      </nav>
+
+      <main class="hero">
+
+        <div class="hero-content">
+
+          <span class="hero-badge">
+            <i class="fa-solid fa-heart"></i>
+            Connect with your people
+          </span>
+
+          <h1>
+            Connect.<br>
+            <span>Vibe.</span><br>
+            Belong.
+          </h1>
+
+          <p>
+            Meet interesting people, discover new connections
+            and create moments that actually matter.
+          </p>
+
+          <div class="hero-actions">
+
+            <button
+              class="primary-btn large"
+              data-action="open-register"
+            >
+              Join BaddieLink
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <button
+              class="text-btn"
+              data-action="open-login"
+            >
+              I already have an account
+            </button>
+
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>10K+</strong>
+              <span>Members</span>
+            </div>
+
+            <div>
+              <strong>5K+</strong>
+              <span>Connections</span>
+            </div>
+
+            <div>
+              <strong>24/7</strong>
+              <span>Community</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+          <div class="floating-card card-one">
+            <div class="mini-avatar avatar-pink">A</div>
+            <div>
+              <strong>Amaka</strong>
+              <span>Just joined</span>
+            </div>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="profile-orb">
+
+            <div class="orb-glow"></div>
+
+            <div class="orb-content">
+              <i class="fa-solid fa-link"></i>
+              <span>BL</span>
+            </div>
+
+          </div>
+
+          <div class="floating-card card-two">
+            <div class="mini-avatar avatar-purple">J</div>
+            <div>
+              <strong>Jay</strong>
+              <span>Online now</span>
+            </div>
+            <i class="fa-solid fa-message"></i>
+          </div>
+
+        </div>
+
+      </main>
+
+    </section>
+
+
+    <!-- ===================================================
+         AGE GATE
+    ==================================================== -->
+
+    <section id="age-page" class="page">
+
+      <div class="auth-container">
+
+        <div class="auth-card age-card">
+
+          <div class="auth-logo">
+            <span class="brand-icon">
+              <i class="fa-solid fa-link"></i>
+            </span>
+            <strong>BaddieLink</strong>
+          </div>
+
+          <div class="age-icon">
+            <i class="fa-solid fa-shield-heart"></i>
+          </div>
+
+          <h2>Before we continue...</h2>
+
+          <p>
+            BaddieLink is intended for adults aged 18 and above.
+            Please confirm your age to continue.
+          </p>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="age-confirm">
+            <span>
+              I confirm that I am 18 years old or above.
+            </span>
+          </label>
+
+          <button
+            class="primary-btn full"
+            data-action="continue-age"
+          >
+            Continue
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <button
+            class="text-btn full"
+            data-action="go-home"
+          >
+            Go Back
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         LOGIN PAGE
+    ==================================================== -->
+
+    <section id="login-page" class="page">
+
+      <div class="auth-container">
+
+        <div class="auth-card">
+
+          <button
+            class="close-page-btn"
+            data-action="go-home"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="auth-logo">
+            <span class="brand-icon">
+              <i class="fa-solid fa-link"></i>
+            </span>
+            <strong>BaddieLink</strong>
+          </div>
+
+          <h2>Welcome back</h2>
+
+          <p class="auth-subtitle">
+            Log in and continue connecting.
+          </p>
+
+          <form id="login-form">
+
+            <div class="form-group">
+              <label for="login-email">Email</label>
+
+              <div class="input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  id="login-email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="login-password">Password</label>
+
+              <div class="input-wrap">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="login-password"
+                  placeholder="Enter your password"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-password-target="login-password"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-options">
+
+              <label class="checkbox-small">
+                <input type="checkbox">
+                Remember me
+              </label>
+
+              <button
+                type="button"
+                class="link-btn"
+                data-action="forgot-password"
+              >
+                Forgot password?
+              </button>
+
+            </div>
+
+            <button class="primary-btn full" type="submit">
+              Log In
+            </button>
+
+          </form>
+
+          <div class="divider">
+            <span>or</span>
+          </div>
+
+          <button class="social-btn">
+            <i class="fa-brands fa-google"></i>
+            Continue with Google
+          </button>
+
+          <p class="auth-switch">
+            Don't have an account?
+            <button data-action="open-register">
+              Create one
+            </button>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         REGISTER PAGE
+    ==================================================== -->
+
+    <section id="register-page" class="page">
+
+      <div class="auth-container">
+
+        <div class="auth-card">
+
+          <button
+            class="close-page-btn"
+            data-action="go-home"
+            aria-label="Close"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="auth-logo">
+            <span class="brand-icon">
+              <i class="fa-solid fa-link"></i>
+            </span>
+            <strong>BaddieLink</strong>
+          </div>
+
+          <h2>Create your account</h2>
+
+          <p class="auth-subtitle">
+            Your next connection could be one click away.
+          </p>
+
+          <form id="register-form">
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="first-name">First name</label>
+                <input
+                  type="text"
+                  id="first-name"
+                  placeholder="First name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input
+                  type="text"
+                  id="last-name"
+                  placeholder="Last name"
+                  required
+                >
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <label for="register-email">Email</label>
+
+              <div class="input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  id="register-email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="register-password">Password</label>
+
+              <div class="input-wrap">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="register-password"
+                  placeholder="Create a password"
+                  minlength="8"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  data-password-target="register-password"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+              <small>
+                Use at least 8 characters.
+              </small>
+            </div>
+
+            <label class="checkbox-row terms-row">
+              <input type="checkbox" id="terms-confirm" required>
+
+              <span>
+                I agree to the
+                <button type="button" class="inline-link">
+                  Terms of Service
+                </button>
+                and
+                <button type="button" class="inline-link">
+                  Privacy Policy
+                </button>.
+              </span>
+            </label>
+
+            <button class="primary-btn full" type="submit">
+              Create Account
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+          </form>
+
+          <p class="auth-switch">
+            Already have an account?
+            <button data-action="open-login">
+              Log in
+            </button>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         ONBOARDING
+    ==================================================== -->
+
+    <section id="onboarding-page" class="page">
+
+      <div class="onboarding-container">
+
+        <div class="onboarding-header">
+
+          <div class="brand">
+            <span class="brand-icon">
+              <i class="fa-solid fa-link"></i>
+            </span>
+            <span>BaddieLink</span>
+          </div>
+
+          <span id="onboarding-step">
+            Step 1 of 3
+          </span>
+
+        </div>
+
+        <div class="progress-bar">
+          <span id="onboarding-progress"></span>
+        </div>
+
+        <!-- STEP 1 -->
+
+        <div
+          class="onboarding-step active"
+          data-step="1"
+        >
+
+          <div class="step-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <h2>Tell us about you</h2>
+
+          <p>
+            Help people know a little more about who you are.
+          </p>
+
+          <div class="onboarding-form">
+
+            <div class="form-group">
+              <label>Username</label>
+
+              <input
+                type="text"
+                id="profile-username"
+                placeholder="@yourusername"
+              >
+            </div>
+
+            <div class="form-group">
+              <label>Bio</label>
+
+              <textarea
+                id="profile-bio"
+                rows="4"
+                maxlength="160"
+                placeholder="Tell people something interesting about you..."
+              ></textarea>
+
+              <small class="character-count">
+                0 / 160
+              </small>
+            </div>
+
+          </div>
+
+          <button
+            class="primary-btn"
+            data-action="next-onboarding"
+          >
+            Continue
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div
+          class="onboarding-step"
+          data-step="2"
+        >
+
+          <div class="step-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <h2>What are you into?</h2>
+
+          <p>
+            Pick a few interests so we can personalize your experience.
+          </p>
+
+          <div class="interest-grid">
+
+            <button class="interest-chip" data-interest="Music">
+              🎵 Music
+            </button>
+
+            <button class="interest-chip" data-interest="Travel">
+              ✈️ Travel
+            </button>
+
+            <button class="interest-chip" data-interest="Fashion">
+              👗 Fashion
+            </button>
+
+            <button class="interest-chip" data-interest="Fitness">
+              🏋️ Fitness
+            </button>
+
+            <button class="interest-chip" data-interest="Movies">
+              🎬 Movies
+            </button>
+
+            <button class="interest-chip" data-interest="Food">
+              🍔 Food
+            </button>
+
+            <button class="interest-chip" data-interest="Gaming">
+              🎮 Gaming
+            </button>
+
+            <button class="interest-chip" data-interest="Business">
+              💼 Business
+            </button>
+
+            <button class="interest-chip" data-interest="Art">
+              🎨 Art
+            </button>
+
+            <button class="interest-chip" data-interest="Sports">
+              ⚽ Sports
+            </button>
+
+            <button class="interest-chip" data-interest="Books">
+              📚 Books
+            </button>
+
+            <button class="interest-chip" data-interest="Photography">
+              📸 Photography
+            </button>
+
+          </div>
+
+          <div class="step-actions">
+
+            <button
+              class="text-btn"
+              data-action="previous-onboarding"
+            >
+              Back
+            </button>
+
+            <button
+              class="primary-btn"
+              data-action="next-onboarding"
+            >
+              Continue
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div
+          class="onboarding-step"
+          data-step="3"
+        >
+
+          <div class="step-icon">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+
+          <h2>Add a profile photo</h2>
+
+          <p>
+            A profile photo makes it easier for people to recognize you.
+          </p>
+
+          <div class="photo-upload">
+
+            <div
+              class="photo-preview"
+              id="photo-preview"
+            >
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <label class="upload-btn">
+
+              <i class="fa-solid fa-camera"></i>
+              Choose Photo
+
+              <input
+                type="file"
+                id="profile-photo"
+                accept="image/*"
+                hidden
+              >
+
+            </label>
+
+          </div>
+
+          <div class="step-actions">
+
+            <button
+              class="text-btn"
+              data-action="previous-onboarding"
+            >
+              Back
+            </button>
+
+            <button
+              class="primary-btn"
+              data-action="finish-onboarding"
+            >
+              Finish Profile
+              <i class="fa-solid fa-check"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         MAIN APP
+    ==================================================== -->
+
+    <section id="app-page" class="page app-page">
+
+      <!-- TOP NAVIGATION -->
+
+      <header class="app-header">
+
+        <div class="brand">
+          <span class="brand-icon">
+            <i class="fa-solid fa-link"></i>
+          </span>
+
+          <span>BaddieLink</span>
+        </div>
+
+        <div class="header-actions">
+
+          <button
+            class="icon-btn"
+            data-action="open-notifications"
+            aria-label="Notifications"
+          >
+            <i class="fa-regular fa-bell"></i>
+            <span class="notification-dot"></span>
+          </button>
+
+          <button
+            class="profile-mini"
+            data-action="open-profile"
+          >
+            <span
+              class="mini-avatar"
+              id="header-avatar"
+            >
+              U
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+        </div>
+
+      </header>
+
+
+      <!-- MAIN LAYOUT -->
+
+      <div class="app-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+          <nav class="sidebar-nav">
+
+            <button
+              class="sidebar-item active"
+              data-view="discover"
+            >
+              <i class="fa-solid fa-compass"></i>
+              <span>Discover</span>
+            </button>
+
+            <button
+              class="sidebar-item"
+              data-view="messages"
+            >
+              <i class="fa-regular fa-comment"></i>
+              <span>Messages</span>
+              <b class="nav-badge">3</b>
+            </button>
+
+            <button
+              class="sidebar-item"
+              data-view="gifts"
+            >
+              <i class="fa-solid fa-gift"></i>
+              <span>Gifts</span>
+            </button>
+
+            <button
+              class="sidebar-item"
+              data-view="wallet"
+            >
+              <i class="fa-solid fa-wallet"></i>
+              <span>Wallet</span>
+            </button>
+
+          </nav>
+
+          <div class="sidebar-bottom">
+
+            <button
+              class="sidebar-item"
+              data-view="profile"
+            >
+              <i class="fa-regular fa-user"></i>
+              <span>My Profile</span>
+            </button>
+
+            <button
+              class="sidebar-item"
+              data-action="logout"
+            >
+              <i class="fa-solid fa-right-from-bracket"></i>
+              <span>Log Out</span>
+            </button>
+
+          </div>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+
+        <main class="app-content">
+
+          <!-- =============================================
+               DISCOVER
+          ============================================== -->
+
+          <section
+            id="discover-view"
+            class="app-view active"
+          >
+
+            <div class="view-header">
+
+              <div>
+                <span class="eyebrow">
+                  Discover
+                </span>
+
+                <h1>
+                  Find your vibe.
+                </h1>
+
+                <p>
+                  Meet people who share your interests.
+                </p>
+              </div>
+
+              <div class="discover-actions">
+
+                <button
+                  class="filter-btn"
+                  data-action="open-filters"
+                >
+                  <i class="fa-solid fa-sliders"></i>
+                  Filters
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+              <!-- PROFILE 1 -->
+
+              <article
+                class="discover-card"
+                data-profile-id="1"
+              >
+
+                <div class="discover-image image-one">
+
+                  <span class="online-indicator">
+                    Online
+                  </span>
+
+                  <button
+                    class="card-like"
+                    data-action="like-profile"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+
+                </div>
+
+                <div class="discover-info">
+
+                  <div class="profile-name-row">
+
+                    <h3>
+                      Amaka, 24
+                      <i class="fa-solid fa-circle-check verified"></i>
+                    </h3>
+
+                    <span class="distance">
+                      2 km
+                    </span>
+
+                  </div>
+
+                  <p>
+                    Lagos · Creative & lifestyle
+                  </p>
+
+                  <div class="tag-list">
+                    <span>Fashion</span>
+                    <span>Travel</span>
+                    <span>Music</span>
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button
+                      class="pass-btn"
+                      data-action="pass-profile"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button
+                      class="message-btn"
+                      data-action="open-chat"
+                      data-profile="Amaka"
+                    >
+                      <i class="fa-regular fa-comment"></i>
+                    </button>
+
+                    <button
+                      class="like-btn"
+                      data-action="like-profile"
+                    >
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+
+              <!-- PROFILE 2 -->
+
+              <article
+                class="discover-card"
+                data-profile-id="2"
+              >
+
+                <div class="discover-image image-two">
+
+                  <span class="online-indicator">
+                    Online
+                  </span>
+
+                  <button
+                    class="card-like"
+                    data-action="like-profile"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+
+                </div>
+
+                <div class="discover-info">
+
+                  <div class="profile-name-row">
+
+                    <h3>
+                      Jay, 27
+                      <i class="fa-solid fa-circle-check verified"></i>
+                    </h3>
+
+                    <span class="distance">
+                      4 km
+                    </span>
+
+                  </div>
+
+                  <p>
+                    Lagos · Entrepreneur
+                  </p>
+
+                  <div class="tag-list">
+                    <span>Business</span>
+                    <span>Fitness</span>
+                    <span>Travel</span>
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button
+                      class="pass-btn"
+                      data-action="pass-profile"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button
+                      class="message-btn"
+                      data-action="open-chat"
+                      data-profile="Jay"
+                    >
+                      <i class="fa-regular fa-comment"></i>
+                    </button>
+
+                    <button
+                      class="like-btn"
+                      data-action="like-profile"
+                    >
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+
+              <!-- PROFILE 3 -->
+
+              <article
+                class="discover-card"
+                data-profile-id="3"
+              >
+
+                <div class="discover-image image-three">
+
+                  <button
+                    class="card-like"
+                    data-action="like-profile"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+
+                </div>
+
+                <div class="discover-info">
+
+                  <div class="profile-name-row">
+
+                    <h3>
+                      Tobi, 25
+                    </h3>
+
+                    <span class="distance">
+                      6 km
+                    </span>
+
+                  </div>
+
+                  <p>
+                    Lagos · Photographer
+                  </p>
+
+                  <div class="tag-list">
+                    <span>Photography</span>
+                    <span>Art</span>
+                    <span>Music</span>
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button
+                      class="pass-btn"
+                      data-action="pass-profile"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button
+                      class="message-btn"
+                      data-action="open-chat"
+                      data-profile="Tobi"
+                    >
+                      <i class="fa-regular fa-comment"></i>
+                    </button>
+
+                    <button
+                      class="like-btn"
+                      data-action="like-profile"
+                    >
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+
+              <!-- PROFILE 4 -->
+
+              <article
+                class="discover-card"
+                data-profile-id="4"
+              >
+
+                <div class="discover-image image-four">
+
+                  <span class="online-indicator">
+                    Online
+                  </span>
+
+                  <button
+                    class="card-like"
+                    data-action="like-profile"
+                  >
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
+
+                </div>
+
+                <div class="discover-info">
+
+                  <div class="profile-name-row">
+
+                    <h3>
+                      Zara, 26
+                      <i class="fa-solid fa-circle-check verified"></i>
+                    </h3>
+
+                    <span class="distance">
+                      8 km
+                    </span>
+
+                  </div>
+
+                  <p>
+                    Lagos · Content creator
+                  </p>
+
+                  <div class="tag-list">
+                    <span>Movies</span>
+                    <span>Fashion</span>
+                    <span>Food</span>
+                  </div>
+
+                  <div class="card-actions">
+
+                    <button
+                      class="pass-btn"
+                      data-action="pass-profile"
+                    >
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <button
+                      class="message-btn"
+                      data-action="open-chat"
+                      data-profile="Zara"
+                    >
+                      <i class="fa-regular fa-comment"></i>
+                    </button>
+
+                    <button
+                      class="like-btn"
+                      data-action="like-profile"
+                    >
+                      <i class="fa-solid fa-heart"></i>
+                    </button>
+
+                  </div>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </section>
+
+
+          <!-- =============================================
+               MESSAGES
+          ============================================== -->
+
+          <section
+            id="messages-view"
+            class="app-view"
+          >
+
+            <div class="view-header">
+
+              <div>
+                <span class="eyebrow">
+                  Messages
+                </span>
+
+                <h1>
+                  Your conversations.
+                </h1>
+              </div>
+
+            </div>
+
+            <div class="messages-layout">
+
+              <div class="conversation-panel">
+
+                <div class="search-box">
+
+                  <i class="fa-solid fa-magnifying-glass"></i>
+
+                  <input
+                    type="search"
+                    id="message-search"
+                    placeholder="Search conversations..."
+                  >
+
+                </div>
+
+                <div class="message-tabs">
+
+                  <button
+                    class="message-tab active"
+                    data-message-filter="all"
+                  >
+                    All
+                  </button>
+
+                  <button
+                    class="message-tab"
+                    data-message-filter="unread"
+                  >
+                    Unread
+                  </button>
+
+                  <button
+                    class="message-tab"
+                    data-message-filter="matches"
+                  >
+                    Matches
+                  </button>
+
+                </div>
+
+                <div id="conversation-list">
+
+                  <button
+                    class="conversation active"
+                    data-chat-name="Amaka"
+                  >
+
+                    <span class="conversation-avatar avatar-pink">
+                      A
+                    </span>
+
+                    <span class="conversation-body">
+
+                      <strong>Amaka</strong>
+
+                      <span>
+                        Hey! How are you?
+                      </span>
+
+                    </span>
+
+                    <span class="conversation-meta">
+                      10:42
+                      <b>2</b>
+                    </span>
+
+                  </button>
+
+
+                  <button
+                    class="conversation"
+                    data-chat-name="Jay"
+                  >
+
+                    <span class="conversation-avatar avatar-purple">
+                      J
+                    </span>
+
+                    <span class="conversation-body">
+
+                      <strong>Jay</strong>
+
+                      <span>
+                        That sounds interesting!
+                      </span>
+
+                    </span>
+
+                    <span class="conversation-meta">
+                      09:18
+                    </span>
+
+                  </button>
+
+
+                  <button
+                    class="conversation"
+                    data-chat-name="Tobi"
+                  >
+
+                    <span class="conversation-avatar avatar-blue">
+                      T
+                    </span>
+
+                    <span class="conversation-body">
+
+                      <strong>Tobi</strong>
+
+                      <span>
+                        Send me the details.
+                      </span>
+
+                    </span>
+
+                    <span class="conversation-meta">
+                      Yesterday
+                    </span>
+
+                  </button>
+
+                </div>
+
+              </div>
+
+
+              <!-- CHAT -->
+
+              <div class="chat-panel">
+
+                <div class="chat-header">
+
+                  <div class="chat-user">
+
+                    <span class="conversation-avatar avatar-pink">
+                      A
+                    </span>
+
+                    <div>
+                      <strong id="chat-name">
+                        Amaka
+                      </strong>
+
+                      <span class="online-status">
+                        Online
+                      </span>
+                    </div>
+
+                  </div>
+
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+
+                </div>
+
+
+                <div
+                  class="chat-messages"
+                  id="chat-messages"
+                >
+
+                  <div class="message received">
+                    <span>
+                      Hey! How are you?
+                    </span>
+                    <small>10:40</small>
+                  </div>
+
+                  <div class="message sent">
+                    <span>
+                      I'm good! Nice to meet you 😊
+                    </span>
+                    <small>10:41</small>
+                  </div>
+
+                  <div class="message received">
+                    <span>
+                      Nice to meet you too!
+                    </span>
+                    <small>10:42</small>
+                  </div>
+
+                </div>
+
+
+                <form
+                  class="chat-input-area"
+                  id="chat-form"
+                >
+
+                  <button
+                    type="button"
+                    class="chat-attach-btn"
+                    aria-label="Attach"
+                  >
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+
+                  <input
+                    type="text"
+                    id="chat-input"
+                    placeholder="Write a message..."
+                    autocomplete="off"
+                  >
+
+                  <button
+                    type="button"
+                    class="gift-chat-btn"
+                    data-action="open-gift-modal"
+                  >
+                    <i class="fa-solid fa-gift"></i>
+                  </button>
+
+                  <button
+                    type="submit"
+                    class="send-btn"
+                    aria-label="Send"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+
+                </form>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- =============================================
+               GIFTS
+          ============================================== -->
+
+          <section
+            id="gifts-view"
+            class="app-view"
+          >
+
+            <div class="view-header">
+
+              <div>
+                <span class="eyebrow">
+                  Gifts
+                </span>
+
+                <h1>
+                  Send a little something.
+                </h1>
+
+                <p>
+                  Show appreciation with virtual gifts.
+                </p>
+              </div>
+
+              <div class="coin-balance">
+                <i class="fa-solid fa-coins"></i>
+                <span id="gift-balance">2,500</span>
+              </div>
+
+            </div>
+
+
+            <div class="gift-grid">
+
+              <button
+                class="gift-card"
+                data-gift="Rose"
+                data-cost="50"
+              >
+
+                <span class="gift-emoji">
+                  🌹
+                </span>
+
+                <strong>Rose</strong>
+
+                <span>
+                  50 coins
+                </span>
+
+              </button>
+
+
+              <button
+                class="gift-card"
+                data-gift="Heart"
+                data-cost="100"
+              >
+
+                <span class="gift-emoji">
+                  ❤️
+                </span>
+
+                <strong>Heart</strong>
+
+                <span>
+                  100 coins
+                </span>
+
+              </button>
+
+
+              <button
+                class="gift-card"
+                data-gift="Chocolate"
+                data-cost="250"
+              >
+
+                <span class="gift-emoji">
+                  🍫
+                </span>
+
+                <strong>Chocolate</strong>
+
+                <span>
+                  250 coins
+                </span>
+
+              </button>
+
+
+              <button
+                class="gift-card"
+                data-gift="Flowers"
+                data-cost="500"
+              >
+
+                <span class="gift-emoji">
+                  💐
+                </span>
+
+                <strong>Flowers</strong>
+
+                <span>
+                  500 coins
+                </span>
+
+              </button>
+
+
+              <button
+                class="gift-card"
+                data-gift="Diamond"
+                data-cost="1,000"
+              >
+
+                <span class="gift-emoji">
+                  💎
+                </span>
+
+                <strong>Diamond</strong>
+
+                <span>
+                  1,000 coins
+                </span>
+
+              </button>
+
+
+              <button
+                class="gift-card"
+                data-gift="Crown"
+                data-cost="2,500"
+              >
+
+                <span class="gift-emoji">
+                  👑
+                </span>
+
+                <strong>Crown</strong>
+
+                <span>
+                  2,500 coins
+                </span>
+
+              </button>
+
+            </div>
+
+          </section>
+
+
+          <!-- =============================================
+               WALLET
+          ============================================== -->
+
+          <section
+            id="wallet-view"
+            class="app-view"
+          >
+
+            <div class="view-header">
+
+              <div>
+                <span class="eyebrow">
+                  Wallet
+                </span>
+
+                <h1>
+                  Your coins.
+                </h1>
+
+                <p>
+                  Manage your BaddieLink balance.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="wallet-layout">
+
+              <div class="wallet-card">
+
+                <span>
+                  Current Balance
+                </span>
+
+                <strong id="wallet-balance">
+                  2,500
+                </strong>
+
+                <span>
+                  coins
+                </span>
+
+                <button
+                  class="primary-btn"
+                  data-action="open-recharge"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                  Recharge
+                </button>
+
+              </div>
+
+
+              <div class="transactions-card">
+
+                <div class="section-heading">
+                  <h3>
+                    Recent activity
+                  </h3>
+                </div>
+
+                <div id="transactions-list">
+
+                  <div class="transaction">
+                    <span class="transaction-icon received">
+                      <i class="fa-solid fa-plus"></i>
+                    </span>
+
+                    <div>
+                      <strong>
+                        Welcome bonus
+                      </strong>
+
+                      <span>
+                        Today
+                      </span>
+                    </div>
+
+                    <b class="positive">
+                      +2,500
+                    </b>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- =============================================
+               PROFILE
+          ============================================== -->
+
+          <section
+            id="profile-view"
+            class="app-view"
+          >
+
+            <div class="view-header">
+
+              <div>
+                <span class="eyebrow">
+                  Profile
+                </span>
+
+                <h1>
+                  Your profile.
+                </h1>
+              </div>
+
+              <button
+                class="secondary-btn"
+                data-action="edit-profile"
+              >
+                <i class="fa-solid fa-pen"></i>
+                Edit Profile
+              </button>
+
+            </div>
+
+
+            <div class="profile-layout">
+
+              <div class="profile-card">
+
+                <div
+                  class="profile-cover"
+                  id="profile-cover"
+                ></div>
+
+                <div class="profile-card-content">
+
+                  <div
+                    class="large-avatar"
+                    id="profile-avatar"
+                  >
+                    U
+                  </div>
+
+                  <h2 id="profile-display-name">
+                    Your Name
+                  </h2>
+
+                  <span
+                    class="profile-username"
+                    id="profile-display-username"
+                  >
+                    @username
+                  </span>
+
+                  <p id="profile-display-bio">
+                    Welcome to my BaddieLink profile.
+                  </p>
+
+                  <div
+                    class="tag-list"
+                    id="profile-interests"
+                  >
+                    <span>Music</span>
+                    <span>Travel</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div class="profile-stats">
+
+                <div class="stat-card">
+                  <strong>24</strong>
+                  <span>Likes</span>
+                </div>
+
+                <div class="stat-card">
+                  <strong>12</strong>
+                  <span>Matches</span>
+                </div>
+
+                <div class="stat-card">
+                  <strong>8</strong>
+                  <span>Gifts</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </main>
+
+      </div>
+
+
+      <!-- MOBILE NAVIGATION -->
+
+      <nav class="mobile-nav">
+
+        <button
+          class="mobile-nav-item active"
+          data-view="discover"
+        >
+          <i class="fa-solid fa-compass"></i>
+          <span>Discover</span>
+        </button>
+
+        <button
+          class="mobile-nav-item"
+          data-view="messages"
+        >
+          <i class="fa-regular fa-comment"></i>
+          <span>Messages</span>
+        </button>
+
+        <button
+          class="mobile-nav-item"
+          data-view="gifts"
+        >
+          <i class="fa-solid fa-gift"></i>
+          <span>Gifts</span>
+        </button>
+
+        <button
+          class="mobile-nav-item"
+          data-view="wallet"
+        >
+          <i class="fa-solid fa-wallet"></i>
+          <span>Wallet</span>
+        </button>
+
+        <button
+          class="mobile-nav-item"
+          data-view="profile"
+        >
+          <i class="fa-regular fa-user"></i>
+          <span>Profile</span>
+        </button>
+
+      </nav>
+
+    </section>
+
+
+    <!-- ===================================================
+         GIFT MODAL
+    ==================================================== -->
+
+    <div
+      class="modal-overlay"
+      id="gift-modal"
+      aria-hidden="true"
+    >
+
+      <div class="modal">
+
+        <button
+          class="modal-close"
+          data-action="close-modal"
+          aria-label="Close"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+          🎁
+        </div>
+
+        <h2>Send a gift</h2>
+
+        <p>
+          Choose a gift to send.
+        </p>
+
+        <div class="modal-gift-grid">
+
+          <button
+            class="modal-gift"
+            data-gift="Rose"
+            data-cost="50"
+          >
+            🌹
+            <span>Rose</span>
+            <small>50</small>
+          </button>
+
+          <button
+            class="modal-gift"
+            data-gift="Heart"
+            data-cost="100"
+          >
+            ❤️
+            <span>Heart</span>
+            <small>100</small>
+          </button>
+
+          <button
+            class="modal-gift"
+            data-gift="Chocolate"
+            data-cost="250"
+          >
+            🍫
+            <span>Chocolate</span>
+            <small>250</small>
+          </button>
+
+          <button
+            class="modal-gift"
+            data-gift="Flowers"
+            data-cost="500"
+          >
+            💐
+            <span>Flowers</span>
+            <small>500</small>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         RECHARGE MODAL
+    ==================================================== -->
+
+    <div
+      class="modal-overlay"
+      id="recharge-modal"
+      aria-hidden="true"
+    >
+
+      <div class="modal">
+
+        <button
+          class="modal-close"
+          data-action="close-modal"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-icon">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+
+        <h2>Recharge wallet</h2>
+
+        <p>
+          Choose a coin package.
+        </p>
+
+        <div class="coin-packages">
+
+          <button
+            class="coin-package"
+            data-coins="500"
+            data-price="1000"
+          >
+            <strong>500</strong>
+            <span>coins</span>
+            <small>₦1,000</small>
+          </button>
+
+          <button
+            class="coin-package"
+            data-coins="1500"
+            data-price="2500"
+          >
+            <strong>1,500</strong>
+            <span>coins</span>
+            <small>₦2,500</small>
+          </button>
+
+          <button
+            class="coin-package"
+            data-coins="3500"
+            data-price="5000"
+          >
+            <strong>3,500</strong>
+            <span>coins</span>
+            <small>₦5,000</small>
+          </button>
+
+          <button
+            class="coin-package"
+            data-coins="8000"
+            data-price="10000"
+          >
+            <strong>8,000</strong>
+            <span>coins</span>
+            <small>₦10,000</small>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         FILTER MODAL
+    ==================================================== -->
+
+    <div
+      class="modal-overlay"
+      id="filter-modal"
+      aria-hidden="true"
+    >
+
+      <div class="modal">
+
+        <button
+          class="modal-close"
+          data-action="close-modal"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>Discover filters</h2>
+
+        <div class="filter-group">
+
+          <label>
+            Maximum distance
+          </label>
+
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value="10"
+            id="distance-filter"
+          >
+
+          <span id="distance-value">
+            10 km
+          </span>
+
+        </div>
+
+        <div class="filter-group">
+
+          <label>
+            Interests
+          </label>
+
+          <div class="interest-grid compact">
+
+            <button class="interest-chip">
+              Music
+            </button>
+
+            <button class="interest-chip">
+              Travel
+            </button>
+
+            <button class="interest-chip">
+              Fashion
+            </button>
+
+            <button class="interest-chip">
+              Fitness
+            </button>
+
+          </div>
+
+        </div>
+
+        <button
+          class="primary-btn full"
+          data-action="apply-filters"
+        >
+          Apply Filters
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         NOTIFICATION MODAL
+    ==================================================== -->
+
+    <div
+      class="modal-overlay"
+      id="notification-modal"
+      aria-hidden="true"
+    >
+
+      <div class="modal">
+
+        <button
+          class="modal-close"
+          data-action="close-modal"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <h2>Notifications</h2>
+
+        <div class="notification-list">
+
+          <div class="notification-item">
+            <span class="notification-icon">
+              ❤️
+            </span>
+
+            <div>
+              <strong>
+                You have a new like
+              </strong>
+
+              <span>
+                Someone liked your profile.
+              </span>
+
+              <small>
+                A few minutes ago
+              </small>
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <span class="notification-icon">
+              💬
+            </span>
+
+            <div>
+              <strong>
+                New message
+              </strong>
+
+              <span>
+                Amaka sent you a message.
+              </span>
+
+              <small>
+                10 minutes ago
+              </small>
+            </div>
+          </div>
+
+          <div class="notification-item">
+            <span class="notification-icon">
+              🎁
+            </span>
+
+            <div>
+              <strong>
+                Gift received
+              </strong>
+
+              <span>
+                You received a virtual gift.
+              </span>
+
+              <small>
+                Yesterday
+              </small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         TOAST
+    ==================================================== -->
+
+    <div
+      class="toast"
+      id="toast"
+      role="status"
+      aria-live="polite"
+    >
+      <i class="fa-solid fa-check-circle"></i>
+      <span id="toast-message">
+        Done
+      </span>
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
